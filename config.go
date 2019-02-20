@@ -73,6 +73,7 @@ var allRules = append([]lint.Rule{
 	&rule.EmptyLinesRule{},
 	&rule.LineLengthLimitRule{},
 	&rule.CallToGCRule{},
+	&rule.MantasSpacingRule{},
 }, defaultRules...)
 
 var allFormatters = []lint.Formatter{
