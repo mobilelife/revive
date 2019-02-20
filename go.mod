@@ -1,4 +1,4 @@
-module github.com/mgechev/revive
+module github.com/mobilelife/revive
 
 require (
 	github.com/BurntSushi/toml v0.3.0
