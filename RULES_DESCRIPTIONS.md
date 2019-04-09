@@ -18,6 +18,7 @@ List of all available rules.
   - [cyclomatic](#cyclomatic)
   - [deep-exit](#deep-exit)
   - [dot-imports](#dot-imports)
+  - [duplicated-imports](#duplicated-imports)
   - [empty-block](#empty-block)
   - [empty-lines](#empty-lines)
   - [error-naming](#error-naming)
@@ -33,6 +34,7 @@ List of all available rules.
   - [increment-decrement](#increment-decrement)
   - [indent-error-flow](#indent-error-flow)
   - [imports-blacklist](#imports-blacklist)
+  - [import-shadowing](#import-shadowing)
   - [line-length-limit](#line-length-limit)
   - [max-public-structs](#max-public-structs)
   - [modifies-parameter](#modifies-parameter)
@@ -168,6 +170,12 @@ More information [here](https://github.com/golang/go/wiki/CodeReviewComments#imp
 
 _Configuration_: N/A
 
+## duplicated-imports
+
+_Description_: It is possible to unintentionally import the same package twice. This rule looks for packages that are imported two or more times.
+
+_Configuration_: N/A
+
 ## empty-block
 
 _Description_: Empty blocks make code less readable and could be a symptom of a bug or unfinished refactoring.
@@ -288,6 +296,13 @@ Example:
 [imports-blacklist]
   arguments =["crypto/md5", "crypto/sha1"]
 ```
+### import-shadowing
+
+_Description_: In GO it is possible to declare identifiers (packages, structs, 
+interfaces, parameters, receivers, variables, constants...) that conflict with the 
+name of an imported package. This rule spots identifiers that shadow an import.
+
+_Configuration_: N/A
 
 ## line-length-limit
 
